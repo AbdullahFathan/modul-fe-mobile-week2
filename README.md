@@ -85,6 +85,70 @@ Saat generate file bloc akan memiliki 3 file yang memiliki fungsi sendiri, yaitu
 
 
 
+### Instalisasi Bloc pada Projek Flutter
+
+  1. import package bloc dari pub dev [bloc-pub dev](https://pub.dev/packages/bloc)
+  2. intsall extension bloc pada VSC untuk mempermudah generate file bloc
+  3. Untuk bungkus material app di main.dart dengan BlocProvider jika memiliki 1 bloc saja, sedangkan memiliki bloc lebih dari 1 bungkus dengan MultiBlocProvider
+
+  **BlocProvider**
+  ```
+  BlocProvider(
+    create: (contex) => NamaBloc(),
+    child: MaterialApp(),
+  );
+
+  ```
+
+  **MultiBlocProvider**
+  ```
+   MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => NamaBloc(),
+        ),
+        BlocProvider(
+          create: (context) => NamaBloc(),
+        ),
+      ],
+      child: MaterialApp(),
+    );
+  ```
+
+
+  4. Untuk injeksi bloc pada desain bisa menggunakan 
+
+  ```
+  context.read<NamaBloc>().add(EventBloc());
+  ```
+
+
+### Widget UI Bloc
+
+1. Bloc Builder
+    Widget untuk mengubah suatu tampilan pada aplikasi sesuai state yang didapatkan
+
+2. Bloc Listener
+    Widget untuk mendengar suatu berubahan state bloc
+
+3. Bloc Consummer
+    Widget gabungan dari bloc Listener dan builder
+
+Sebenarnya widget pada bloc tuuh banyak yang paling sering digunakan adalah 3 diatas, blocprovider, multiblocprovider.
+
+Referensi : [Referensi-Belajar-Bloc](https://medium.com/flutter-community/flutter-bloc-for-beginners-839e22adb9f5)
+
+---
+
+## Get_Strorage
+
+
+
+
+
+
+
+
 
 
 
