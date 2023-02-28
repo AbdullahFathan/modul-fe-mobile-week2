@@ -4,7 +4,7 @@ Week 2 ini memiliki beberapa poin materi
         -- Http Call
         -- State Managemnt Bloc
         -- Get_storage
-        -- Object Model
+        
 
 ---
 
@@ -142,7 +142,9 @@ Referensi : [Referensi-Belajar-Bloc](https://medium.com/flutter-community/flutte
 
 ## Get_Strorage
 
+Get_storage adalah package untuk menyimpan data penting ke dalam file user seperti token akses user yang di dapatkan dari server. Token ini memiliki fungsi yang bearti dalam akses data user di server. Oleh karena itu, data tersebut di simpan dalam devices user.
 
+dokumentasi get_storage : [dokemantasi-get_storage](https://pub.dev/packages/get_storage)
 
 
 
